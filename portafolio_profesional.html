@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portafolio Profesional - [Tu Nombre]</title>
+  <style>
+    :root {
+      --fondo: #f5f7fa;
+      --texto: #333;
+      --primario: #0a3d62;
+      --secundario: #1e5f74;
+      --acento: #ffd32a;
+      --blanco: #fff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --fondo: #121212;
+        --texto: #f5f5f5;
+        --primario: #1b4965;
+        --secundario: #62b6cb;
+        --acento: #ffe066;
+        --blanco: #1c1c1c;
+      }
+    }
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: var(--fondo);
+      color: var(--texto);
+      transition: background 0.3s ease, color 0.3s ease;
+    }
+    header {
+      text-align: center;
+      background: var(--primario);
+      color: white;
+      padding: 2rem 1rem;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+    .cv-btn {
+      background: var(--acento);
+      color: var(--primario);
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+    .cv-btn:hover {
+      background: #ffca2c;
+    }
+    nav {
+      background: var(--secundario);
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      padding: 1rem;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: color 0.3s ease;
+    }
+    nav a:hover {
+      color: var(--acento);
+    }
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      background: var(--blanco);
+      border-radius: 12px;
+      padding: 2rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    h2 {
+      color: var(--primario);
+      border-bottom: 3px solid var(--secundario);
+      padding-bottom: 0.5rem;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .proyecto {
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 1rem;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .proyecto:hover {
+      transform: scale(1.03);
+      box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+    }
+    .proyecto img {
+      width: 100%;
+      border-radius: 6px;
+      margin-top: 0.5rem;
+    }
+    .proyecto a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      text-decoration: none;
+      color: var(--secundario);
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+    .proyecto a:hover {
+      color: var(--acento);
+    }
+    footer {
+      text-align: center;
+      background: var(--primario);
+      color: white;
+      padding: 1rem;
+      margin-top: 3rem;
+    }
+    .contacto a {
+      color: var(--acento);
+      font-weight: bold;
+      text-decoration: none;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>[Tu Nombre]</h1>
+    <p>Diseñadora Instruccional | Analista Curricular | Educación Superior</p>
+    <a href="docs/CV_TuNombre.pdf" download>
+      <button class="cv-btn">Descargar CV</button>
+    </a>
+  </header>
+  <nav>
+    <a href="#sobre-mi">Sobre mí</a>
+    <a href="#proyectos">Proyectos</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+  <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>Soy diseñadora instruccional y analista curricular con experiencia en el diseño de cursos en línea, planificación inversa, elaboración de indicadores de logro y desarrollo de instrumentos evaluativos alineados con la Taxonomía de Bloom revisada. Mi enfoque combina la coherencia curricular, el aprendizaje activo y la innovación educativa.</p>
+  </section>
+  <section id="proyectos">
+    <h2>Proyectos Destacados</h2>
+    <div class="grid">
+      <div class="proyecto">
+        <h3>Gestión de la Transformación Digital</h3>
+        <p>Diseño instruccional completo basado en planificación inversa, integrando aprendizaje basado en proyectos y análisis de caso.</p>
+        <img src="images/proyecto1.jpg" alt="Gestión de la Transformación Digital" />
+        <a href="proyectos/transformacion-digital.html" target="_blank">Ver detalle del proyecto</a>
+      </div>
+      <div class="proyecto">
+        <h3>Visión Estratégica y Liderazgo Avanzado</h3>
+        <p>Desarrollo de storytelling, rúbricas y actividades de aprendizaje experienciales aplicadas a contextos de liderazgo y trabajo en equipo.</p>
+        <img src="images/proyecto2.jpg" alt="Diplomado en Liderazgo Avanzado" />
+        <a href="proyectos/liderazgo-avanzado.html" target="_blank">Ver detalle del proyecto</a>
+      </div>
+      <div class="proyecto">
+        <h3>Minería de Datos</h3>
+        <p>Diseño curricular con enfoque en análisis de datos, limpieza y modelamiento, aplicando casos transversales en ingeniería industrial.</p>
+        <img src="images/proyecto3.jpg" alt="Curso de Minería de Datos" />
+        <a href="proyectos/mineria-datos.html" target="_blank">Ver detalle del proyecto</a>
+      </div>
+    </div>
+  </section>
+  <section id="contacto" class="contacto">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme a <a href="mailto:tuemail@correo.com">tuemail@correo.com</a> o visitar mi perfil en <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>.</p>
+  </section>
+  <footer>
+    <p>&copy; 2025 [Tu Nombre]. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
